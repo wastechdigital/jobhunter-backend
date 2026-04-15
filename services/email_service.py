@@ -1,8 +1,9 @@
+import os
 import aiohttp
 import json
 from datetime import datetime
 
-RESEND_API_KEY = "re_YzgB6tD5_2hFwmfJxkLQjWvTxKcpzaa3k"
+RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
 RESEND_URL = "https://api.resend.com/emails"
 FROM_EMAIL = "JobHunter AI <onboarding@resend.dev>"
 
