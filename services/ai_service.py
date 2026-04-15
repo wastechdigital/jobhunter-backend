@@ -15,7 +15,7 @@ async def score_and_enrich_jobs(jobs: List[Dict], resume_data: dict, api_key: st
         jobs_summary.append(f"{i}. [{job['platform'].upper()}] {job['title']} at {job['company']} - {job['location']}")
     
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-haiku-4-5-20251001",
         max_tokens=2000,
         messages=[{
             "role": "user",
@@ -75,7 +75,7 @@ async def generate_cover_letter(job: Dict, resume_data: dict, client=None, api_k
         client = anthropic.Anthropic(api_key=api_key)
     
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-haiku-4-5-20251001",
         max_tokens=800,
         messages=[{
             "role": "user",

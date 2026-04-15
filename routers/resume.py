@@ -20,7 +20,7 @@ async def extract_text_from_pdf(file_bytes: bytes) -> str:
 async def parse_resume_with_ai(resume_text: str, api_key: str) -> dict:
     client = anthropic.Anthropic(api_key=api_key)
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-haiku-4-5-20251001",
         max_tokens=2000,
         messages=[{
             "role": "user",
